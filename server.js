@@ -8,6 +8,7 @@ require('./connection')
 const server = http.createServer(app);
 const {Server} = require('socket.io');
 const io = new Server(server);
+const PORT = process.env.PORT
 
 
 const User = require('./models/User');
@@ -42,8 +43,8 @@ app.post('/create-payment', async(req, res)=> {
 })
 
 
-server.listen(3000, ()=> {
-  console.log('server running at port', 3000)
+server.listen({PORT}, ()=> {
+  console.log('server running at port', {PORT})
 })
 
 app.set('socketio', io);
