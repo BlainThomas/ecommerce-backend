@@ -1,8 +1,9 @@
 {
   "name": "bad-a-backend",
   "version": "1.0.0",
-  "description": "",
+  "description": "Backend for website",
   "main": "index.js",
+  "repository": "https://github.com/BlainThomas/ecommerce-backend",
   "scripts": {
     "dev": "nodemon server.js",
     "start": "node server.js"
